@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XF_Agenda.Views;
 
 namespace XF_Agenda
 {
@@ -10,7 +11,7 @@ namespace XF_Agenda
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ContatosPage();
         }
 
         protected override void OnStart()

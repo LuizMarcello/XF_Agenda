@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_Agenda.Views.ContatosPage">
+
+    <StackLayout>
+        <Entry x:Name="txtNome" Placeholder="Informe o nome"/>
+        <Button x:Name="btnBuscar" Text="Exibir" Clicked="On_Click"/>
+        <ListView x:Name="lvwContatos">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nome}" Detail="{Binding Email}" TextColor="Blue"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>
+        
