@@ -7,6 +7,7 @@ using XF_Agenda.Services;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XF_Agenda.ViewModels;
 
 namespace XF_Agenda.Views
 {
@@ -16,11 +17,9 @@ namespace XF_Agenda.Views
         public ContatosPage()
         {
             InitializeComponent();
+            this.BindingContext = new ContatosViewModel();
         }
 
-        private void On_Click(object sender, EventArgs e)
-        {
-            lvwContatos.ItemsSource = ContatoService.GetContatos(txtNome.Text);
-        }
+        
     }
 }

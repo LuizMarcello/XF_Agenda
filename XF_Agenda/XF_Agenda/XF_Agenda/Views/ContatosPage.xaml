@@ -4,9 +4,9 @@
              x:Class="XF_Agenda.Views.ContatosPage">
 
     <StackLayout>
-        <Entry x:Name="txtNome" Placeholder="Informe o nome"/>
-        <Button x:Name="btnBuscar" Text="Exibir" Clicked="On_Click"/>
-        <ListView x:Name="lvwContatos">
+        <Entry Text="{Binding txtNome}" Placeholder="Informe o nome"/>
+        <Button Text="Exibir" Command="{Binding ExibirCommand}" />
+        <ListView ItemsSource="{Binding Contatos}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Nome}" Detail="{Binding Email}" TextColor="Blue"/>
